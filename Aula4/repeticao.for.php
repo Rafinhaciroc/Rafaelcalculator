@@ -16,9 +16,9 @@
 </p>
 
     <?php
-        for($contador =0; $contador <10;$contado++)
+        for($contador =0; $contador <11; $contado++)
         {
-            echo "2 x $contador = " . $contador * 2. " <br> ";
+            echo "2 x $contador = " . $contador * 2 . " <br> ";
         }
 
 ?>
