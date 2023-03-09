@@ -3,11 +3,11 @@
 <?php
 
     $nomes = [
-         "Murilo"
-         "Poliana"
-         "Dalva"
-         "Lavinia"
-         "Camila"
+         "Murilo",
+         "Poliana",
+         "Dalva",
+         "Lavinia",
+         "Camila",
          "Kauã"
 ];
 
