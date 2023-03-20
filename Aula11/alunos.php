@@ -1,39 +1,25 @@
-
-<h2></h2>
-<br>
 <?php
-$aluno1 = [
-    "nome" => "Poliana Silveira",
-    "nota" => 7,
-    "notas" => 9
-
+$block1 = [
+    "nome" => "Poliana ",
+    "nota3" => 7,
+    "nota2" => 9
 ];
-
-$aluno2 = [
+$block2 = [
     "nome" => "Murilo Alexandre",
-    "nota" => 8,
-    "notas" => 5
-
+    "nota3" => 8,
+    "nota2" => 5
 ];
-$aluno3 = [
-    "nome" => "Andre Felipe",
-    "nota" => 6,
-    "notas" => 7
-
+$block3 = [
+    "nome" => "Lavinia Sandi",
+    "nota3" => 6,
+    "nota2" => 7
 ];
-$aluno4 = [
-    "nome" => "Lavinia Sandy",
-    "nota" => 8,
-    "notas" => 9
-
+$block4 = [
+    "nome" => "Felipe Mota",
+    "nota3" => 5,
+    "nota2" => 8
 ];
-$dados = [
-    $aluno1,
-    $aluno2,
-    $aluno3,
-    $aluno4
-];
-    print_r($dados);
-    echo json_encode($dados)
-
+$tabela = [$block1, $block2, $block3, $block4];
+echo json_encode($tabela);
 ?>
+
