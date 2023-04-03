@@ -1,5 +1,14 @@
+<?php
+
+include "dados.php";
+
+?>
+
+
+
+
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,18 +16,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   </head>
   <body>
-  <h1>Olá mundo!</h1>
+
     <!--Carousel-->
     <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="imagens/foto1.jpg" class="d-block w-100"   alt="...">
+      <img src="imagens/foto1.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="imagens/foto2.jpg" class="d-block w-100"    alt="...">
+      <img src="imagens/foto2.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="imagens/foto3.jpg" class="d-block w-100"   alt="...">
+      <img src="imagens/foto3.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -31,8 +40,7 @@
   </button>
 </div>
     <!--Final do Carousel-->
-    
-    <!--Inicio do Menu -->
+    <!--Inicio do menu-->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -42,26 +50,28 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+      <?php 
+        $categorias = [];
+        
+        foreach($produtos as $key => $value):
+          if(! in_array($value["categoria"], $categorias)):
+            $categorias[] = $value["categoria"];
+
+            ?>
+        
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          <a class="nav-link" href="#">
+            <?php echo $value["categoria"]?> 
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+      
+      <?php 
+      endif;
+      endforeach; 
+      ?>
+       
+      
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -70,30 +80,32 @@
     </div>
   </div>
 </nav>
-    <!--Final do Menu -->
+     <!--Final do menu-->
 
-    <!--Lista de Produtos-->
-    
+<hr>
+
+     <!--Lista de Produtos-->
     <div class="container">
         <div class="row row-cols-4">
+          
+        <?php foreach($produtos as $key => $produto):?>
         
-        <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="col">  
+      <div class="card">    
+        <img src="<?php echo $produto ["foto"];?>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo $produto ["nome"];?></h5>
+              <a href="#" class="btn btn-primary">Ver produto</a>
   </div>
 </div>
-
+        </div>
+  <?php endforeach; ?>
         </div>
     </div>
+     <!--Final da lista de Produtos-->
 
-    <!--final da Lista de Produtos -->
-
-
-
-   
+<hr>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   </body>
 </html>
