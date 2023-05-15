@@ -26,7 +26,7 @@ VALUES (?, ?, ?, ?);";
 $comando->execute();
 }
 //abre o arquivo form.php
-header("Location: form.php");
+header("Location: produtos.php");
 ?>
 
 

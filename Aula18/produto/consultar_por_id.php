@@ -20,12 +20,12 @@ $sql = "SELECT*FROM `produto` WHERE  `idproduto`= ? ; ";
 $comando->execute();
 
 //pegar o resultado da consulta
-$reusltado = $comando ->get_result();
+$resultado = $comando ->get_result();
 
 //pegar a primeira linha do resultado
-$produto = $reusltado->fetch_assoc();
+$produto = $resultado->fetch_assoc();
 
-var_dump ($produto);
+
 
 }
 
