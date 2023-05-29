@@ -23,6 +23,6 @@
 <?php
       
       $nome = "Ivan"
-      echo"Olá $nome seja bem vindo a aula de beckend"
+      echo "Olá $nome seja bem vindo a aula de beckend"
 
 ?>

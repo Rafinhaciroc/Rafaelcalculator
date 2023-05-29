@@ -1,14 +1,6 @@
-<?php require_once"consultar_por_id.php"?>
+<?php require_once "consultar_por_id.php"?>
+<?php require_once "../template/cabecalho.php"; ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
     <h1>Cadratro de Produto</h1>
     <hr>
     <form action="<?php  echo isset($produto) ? 'atualizar.php' : 'inserir.php' ?>" 
@@ -32,5 +24,4 @@
     <button type="submit">Cadastrar</button>
 
     </form>
-</body>
-</html>
+    <?php require_once "../template/rodape.php"; ?>

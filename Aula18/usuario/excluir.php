@@ -20,7 +20,7 @@ $sql = "DELETE FROM `usuario` WHERE  `idusuario`= ? ; ";
 $comando->execute();
 }
 //abre o arquivo form.php
-header("Location:   usuarios.php");
+header("Location:   index.php");
 
 ?>
 
