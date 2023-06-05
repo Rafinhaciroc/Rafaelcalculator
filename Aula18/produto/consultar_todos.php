@@ -1,13 +1,16 @@
 <?php
 
-require_once"../conexao.php";
+require_once "../conexao.php";
 
 
 //String com o comando SQL oara ser executado do DB
-$sql = "SELECT*FROM `produto` ";
+$sql = "SELECT*FROM `produto` where categoria like %?% ";
         
 //Prepara o SQL par ser executado no banco de dados
  $comando = $conexao->prepare($sql);
+
+ $categoria = $_GET['categoria'] ?? "";
+ $comando->bind_param("s", $categoria);
 
 //executa o SQL - Comando no Banco de Dados
 $comando->execute();

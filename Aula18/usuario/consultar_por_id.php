@@ -1,6 +1,6 @@
 <?php
 
-require_once"../conexao.php";
+require_once "../conexao.php";
 
 //Verifica se foi enviado o param id pela URL
 if(isset($_GET['id'])){

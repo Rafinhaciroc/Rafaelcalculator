@@ -1,5 +1,7 @@
+<?php require_once "../controla_sessao/controla.php";?>
 <?php require_once "consultar_todos.php"; ?>
 <?php require_once "../template/cabecalho.php"; ?>
+<?php require_once "../template/menu.php"; ?>
 
 <!doctype html>
 <html lang="pt-br">
@@ -20,7 +22,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     </div>
-    <table class="table">
+    <table class="table" id="myTable">
   <thead>
     
  

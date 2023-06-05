@@ -1,6 +1,6 @@
 <?php
 
-require_once"../conexao.php";
+require_once "../conexao.php";
 
 
 //String com o comando SQL oara ser executado do DB
