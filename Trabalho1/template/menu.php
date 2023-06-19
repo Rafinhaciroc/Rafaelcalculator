@@ -1,5 +1,5 @@
 
-<!-- Inicio do Menu -->
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     
@@ -17,4 +17,4 @@
     </div>
   </div>
 </nav>
-     <!-- Final do Menu -->
+   
