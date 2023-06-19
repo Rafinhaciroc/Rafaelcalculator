@@ -5,7 +5,7 @@
 
     <h1>Cadastro Tarefas</h1>
     <hr>
-    <form action="<?php  echo isset($Tarefa) ? 'atualizar.php' : 'inserir.php' ?>" 
+    <form action="<?php  echo isset($tarefa) ? 'atualizar.php' : 'inserir.php' ?>" 
     method="post" 
     
     enctype="multipart/form-data">
@@ -14,8 +14,8 @@
     <input type="text" name="Responsavel" id="Responsavel" value="<?php echo $tarefa['Responsavel'] ?? ""; ?>"><br>
     <input type="hidden" name="id" id="id" value="<?php echo $tarefa['idtarefa'] ?? ""; ?>"><br>
 
-    <label for="descricao">Descrição</label><br>
-    <textarea name= "Descricao" id="descricao"><?php echo $tarefa['descricao'] ?? ""; ?></textarea><br>
+    <label for="Descricao">Descrição</label><br>
+    <textarea name= "Descricao" id="Descricao" ><?php echo $tarefa['Descricao'] ?? ""; ?></textarea><br>
 
     <label for="Prioridade">Prioridade</label><br>
     <input type="text"  name="Prioridade" id="Prioridade" value="<?php echo $tarefa['Prioridade'] ?? ""; ?>"><br>

@@ -1,4 +1,3 @@
-
 <?php
 
 require_once "../conexao.php";
@@ -10,12 +9,12 @@ if(isset($_POST["Responsavel"]) &&
 
 $id =         $_POST["id"];
 $Responsavel = $_POST["Responsavel"];
-$descricao =  $_POST["Descricao"];
+$Descricao =  $_POST["Descricao"];
 $Prioridade =      $_POST["Prioridade"];
 $DataLimite =     $_POST["DataLimite"];  
 
 
-$sql = "UPDATE Tarefas
+$sql = "UPDATE tarefas
         SET `Responsavel`= ?, `Descricao`= ?, `Prioridade`= ?, `DataLimite`= ?
         WHERE  `idtarefas`= ? ";
        
@@ -23,7 +22,7 @@ $sql = "UPDATE Tarefas
  $comando = $conexao->prepare($sql);
 
 
- $comando->bind_param("ssssi",$Responsavel, $Descricao,$Prioridade,$Datalimite,$id);
+ $comando->bind_param("ssssi",$Responsavel, $Descricao,$Prioridade,$DataLimite,$id);
 
 
 $comando->execute();
@@ -33,9 +32,3 @@ header("Location: index.php");
 
 
 ?>
-
-
-
-
-
-

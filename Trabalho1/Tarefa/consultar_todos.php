@@ -4,7 +4,7 @@ require_once "../conexao.php";
 
 
 
-$sql = "SELECT*FROM `Tarefas` " ;
+$sql = "SELECT*FROM `tarefas` " ;
         
 
  $comando = $conexao->prepare($sql);
@@ -18,10 +18,10 @@ $comando->execute();
 $resultado = $comando ->get_result();
 
 
-$Tarefas = [];
+$tarefas = [];
 
-while($Tarefa = $resultado->fetch_assoc()){
-        $Tarefas[] = $Tarefa;
+while($tarefa = $resultado->fetch_assoc()){
+        $tarefas[] = $tarefa;
 
 
         

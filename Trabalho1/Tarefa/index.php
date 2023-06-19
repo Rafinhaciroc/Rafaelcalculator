@@ -22,10 +22,10 @@
   
   <tr>
       
-      <th scope="col">DataLimite</th>
       <th scope="col">Responsável</th>
-      <th scope="col">Prioridade</th>
       <th scope="col">Descrição</th>
+      <th scope="col">Prioridade</th>
+      <th scope="col">DataLimite</th>
       <th scope="col" width="25%">Ações</th>
     </tr>
     
@@ -34,7 +34,7 @@
   </thead>
    <tbody>
    
-   <?php foreach($Tarefas as $tarefa){ ?>
+   <?php foreach($tarefas as $tarefa){ ?>
    <tr>
       <th scope="row"><?php echo $tarefa['Responsavel']; ?></th>
       <td><?php echo $tarefa['Descricao']; ?></td>

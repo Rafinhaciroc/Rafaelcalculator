@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
 $id = $_GET['id'];
 
 
-$sql = "SELECT*FROM `Tarefas` WHERE  `idtarefas`= ? ; ";
+$sql = "SELECT*FROM `tarefas` WHERE  `idtarefas`= ? ; ";
         
 
  $comando = $conexao->prepare($sql);
