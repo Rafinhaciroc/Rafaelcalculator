@@ -12,7 +12,7 @@
 
     <label for="Responsavel">Responsavel</label><br>
     <input type="text" name="Responsavel" id="Responsavel" value="<?php echo $tarefa['Responsavel'] ?? ""; ?>"><br>
-    <input type="hidden" name="id" id="id" value="<?php echo $tarefa['idtarefa'] ?? ""; ?>"><br>
+    <input type="hidden" name="id" id="id" value="<?php echo $tarefa['idtarefas'] ?? ""; ?>"><br>
 
     <label for="Descricao">Descrição</label><br>
     <textarea name= "Descricao" id="Descricao" ><?php echo $tarefa['Descricao'] ?? ""; ?></textarea><br>
